@@ -1,18 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Home = () => {
     const [a, setA] = useState(0);
-    const eventHandlerIncrement = ()=>{
-        setA(a + 1);
-    }
-    const eventHandlerDecrement =()=>{
-        setA(a-1);
-    }
+    useEffect(()=>{
+        console.log("Showing Effect")
+    },[a])
   return (
     <div>
-        <button onClick={eventHandlerIncrement}>+</button>
+        <button onClick={()=> setA(a + 1)}>+</button>
         <p>{a}</p>
-        <button onClick={eventHandlerDecrement}>-</button>
+        <button onClick={()=> setA(a-1)}>-</button>
     </div>
   )
 }
