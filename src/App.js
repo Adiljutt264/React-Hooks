@@ -1,8 +1,10 @@
 import './App.css';
+import Home from './Home';
 
 function App() {
   return (
-    <div className="App">React Hooks
+    <div className="App">
+    <Home/>
     </div>
   );
 }
